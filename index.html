@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<title>Alejandro Bauer — Senior Product Designer & AI-Native Design Systems</title>
+<meta name="description" content="Senior Product Designer at Tractive specializing in AI-native design systems, token efficiency, and the future of human-AI interfaces. Based in Linz, Austria."/>
+<meta name="author" content="Alejandro Bauer"/>
+<meta name="keywords" content="product designer, AI-native design systems, design tokens, UX, Figma, Claude, Tractive, Linz, Austria"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://alejandrobauer.com/"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://alejandrobauer.com/"/>
+<meta property="og:title" content="Alejandro Bauer — Senior Product Designer & AI-Native Design Systems"/>
+<meta property="og:description" content="Senior Product Designer at Tractive specializing in AI-native design systems, token efficiency, and the future of human-AI interfaces. Based in Linz, Austria."/>
+<meta property="og:image" content="https://alejandrobauer.com/screen.png"/>
+<meta property="og:locale" content="en_US"/>
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Alejandro Bauer — Senior Product Designer & AI-Native Design Systems"/>
+<meta name="twitter:description" content="Senior Product Designer at Tractive specializing in AI-native design systems, token efficiency, and the future of human-AI interfaces."/>
+<meta name="twitter:image" content="https://alejandrobauer.com/screen.png"/>
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "slate-bg": "#E9EEEE",
+                        "slate-border": "#CBD5D5",
+                        "slate-dark": "#1A1B1B",
+                        "blueprint-white": "#E9EEEE",
+                        "blueprint-line": "#CBD5D5",
+                        "background": "#E9EEEE",
+                        "on-background": "#1A1B1B",
+                        "surface": "#E9EEEE",
+                        "on-surface": "#1A1B1B",
+                        "surface-variant": "#CBD5D5",
+                        "brand-orange": "#F66227"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0rem",
+                        "lg": "0rem",
+                        "xl": "0rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["JetBrains Mono"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }</script>
+<style type="text/tailwindcss">
+        html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+        body { font-family: 'Inter', sans-serif; background-color: #E9EEEE; color: #1A1B1B; }
+        .font-headline { font-family: 'JetBrains Mono', monospace; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #E9EEEE; }
+        ::-webkit-scrollbar-thumb { background: #1A1B1B; }.reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .dot-canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .pulse-overlay {
+            background: radial-gradient(circle at 50% 50%, rgba(26, 27, 27, 0.03) 0%, transparent 70%);
+            animation: pulseGrid 8s ease-in-out infinite alternate;
+        }
+        @keyframes pulseGrid {
+            0% { opacity: 0.3; transform: scale(0.95); }
+            100% { opacity: 0.8; transform: scale(1.1); }
+        }
+        .wavy-strike {
+            position: relative;
+            display: inline-block;
+        }
+        .wavy-strike::after {
+            content: "";
+            position: absolute;
+            left: -5%;
+            top: 55%;
+            width: 110%;
+            height: 5px;
+            background-color: #F66227;
+            transform: translateY(-50%);
+            pointer-events: none;
+            z-index: 1;
+            opacity: 1;
+        }
+        .nav-link.active-nav {
+            color: #1A1B1B !important;
+            border-bottom: 1px solid #1A1B1B;
+        }
+        .contact-card {
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            perspective: 1000px;
+        }
+        .contact-card:hover {
+            transform: translateY(-12px) rotateX(6deg) rotateY(4deg);
+        }.profile-dither {
+            filter: grayscale(100%) contrast(150%) brightness(100%);
+            transition: filter 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .profile-dither:hover {
+            filter: grayscale(0%) contrast(100%) brightness(100%);
+        }
+        @keyframes menuReveal {
+            from { clip-path: circle(0% at calc(100% - 40px) 40px); }
+            to   { clip-path: circle(150% at calc(100% - 40px) 40px); }
+        }
+        #mobile-menu-overlay {
+            clip-path: circle(0% at calc(100% - 40px) 40px);
+        }
+        #mobile-menu-overlay.open {
+            animation: menuReveal 0.8s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+        }
+        #mobile-menu-overlay.closing {
+            animation: menuReveal 0.8s cubic-bezier(0.85, 0, 0.15, 1) reverse forwards;
+        }
+        .menu-inner {
+            transition: opacity 0.25s ease;
+        }
+        #mobile-menu-overlay.hiding .menu-inner {
+            opacity: 0;
+        }
+        .scan-line {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: rgba(246, 98, 39, 0.6);
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            animation: scan 4s linear infinite;
+            display: none;
+        }
+        .open .scan-line { display: block; }
+        @keyframes scan {
+            0% { top: 0%; opacity: 0; }
+            5% { opacity: 1; }
+            95% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+        .typewriter-text {
+            overflow: hidden;
+            border-right: 2px solid transparent;
+            white-space: nowrap;
+            width: 0;
+        }
+        .open .typewriter-text {
+            animation: typing 0.8s steps(20, end) forwards;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes untyping {
+            from { width: 100%; }
+            to { width: 0; }
+        }
+        #mobile-menu-overlay.typing-out .typewriter-text {
+            animation: untyping 0.25s steps(20, end) forwards !important;
+        }
+        .recalibrating-grid {
+            background-image: radial-gradient(circle, #CBD5D5 1px, transparent 1px);
+            background-size: 32px 32px;
+            animation: gridDrift 20s linear infinite;
+        }
+        @keyframes gridDrift {
+            0% { background-position: 0 0; }
+            100% { background-position: 32px 32px; }
+        }
+        .schematic-element {
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .blueprint-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(203, 213, 213, 0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(203, 213, 213, 0.3) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .blueprint-subgrid {
+            background-image: 
+                linear-gradient(to right, rgba(203, 213, 213, 0.15) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(203, 213, 213, 0.15) 1px, transparent 1px);
+            background-size: 8px 8px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    .dark body {
+        background-color: #1A1B1B !important;
+        color: #E9EEEE !important;
+    }
+    .dark .bg-slate-bg {
+        background-color: #1A1B1B !important;
+    }
+    .dark .text-slate-dark {
+        color: #E9EEEE !important;
+    }
+    .dark .text-slate-dark\/60 {
+        color: rgba(233, 238, 238, 0.6) !important;
+    }
+    .dark .text-slate-dark\/70 {
+        color: rgba(233, 238, 238, 0.7) !important;
+    }
+    .dark .text-slate-dark\/40 {
+        color: rgba(233, 238, 238, 0.4) !important;
+    }
+    .dark .text-slate-dark\/80 {
+        color: rgba(233, 238, 238, 0.8) !important;
+    }
+    .dark .text-slate-dark\/50 {
+        color: rgba(233, 238, 238, 0.5) !important;
+    }
+    .dark .hover\:text-slate-dark:hover {
+        color: #E9EEEE !important;
+    }
+    .dark .border-slate-border {
+        border-color: rgba(203, 213, 213, 0.2) !important;
+    }
+    .dark .bg-slate-dark {
+        background-color: #E9EEEE !important;
+    }
+    .dark .text-slate-bg {
+        color: #1A1B1B !important;
+    }
+    .dark nav {
+        background-color: rgba(26, 27, 27, 0.8) !important;
+    }
+    .dark .contact-card {
+        background-color: rgba(26, 27, 27, 0.4) !important;
+    }
+    .dark .nav-link.active-nav {
+        color: #F66227 !important;
+        border-bottom-color: #F66227 !important;
+    }
+    .dark #mobile-menu-overlay {
+        background-color: rgba(26, 27, 27, 0.95) !important;
+    }
+    .dark .recalibrating-grid {
+        background-image: radial-gradient(circle, rgba(203, 213, 213, 0.1) 1px, transparent 1px);
+    }
+</style></head>
+<body class="bg-slate-bg text-slate-dark antialiased" data-mode="connect" id="top">
+<nav class="fixed top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-[700px] z-[100] border border-slate-border px-6 py-4 transition-all bg-[#E9EEEE]/80 backdrop-blur-xl">
+<div class="flex justify-between items-center w-full">
+<a class="font-headline font-bold text-lg tracking-tighter text-slate-dark uppercase cursor-pointer hover:opacity-70 transition-opacity" href="#top" style="">
+                AB// 
+            </a>
+<div class="hidden md:flex gap-8">
+<a class="nav-link font-headline tracking-tighter uppercase text-xs font-bold hover:text-slate-dark transition-all text-slate-dark/60" href="#articles" style="">Articles</a>
+<a class="nav-link font-headline tracking-tighter uppercase text-xs font-bold hover:text-slate-dark transition-all text-slate-dark/60" href="#case-studies" style="">Case Studies</a>
+<a class="nav-link font-headline tracking-tighter uppercase text-xs font-bold text-slate-dark/60 hover:text-slate-dark transition-all" href="#resources" style="">Resources</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center transition-opacity hover:opacity-70" id="theme-toggle">
+<span class="material-symbols-outlined !text-[24px] cursor-pointer" id="theme-toggle-icon" style="">contrast</span>
+</button><a class="font-headline tracking-tighter uppercase text-[10px] font-bold px-6 py-2.5 bg-slate-dark text-slate-bg transition-colors hover:bg-brand-orange" href="#contact" style="">Contact</a>
+<button class="md:hidden flex items-center text-slate-dark focus:outline-none z-[110]" id="menu-toggle" onclick="toggleMenu()" style="">
+<span class="material-symbols-outlined" id="menu-icon" style="">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<div class="fixed inset-0 z-[105] bg-[#E9EEEE]/95 backdrop-blur-2xl md:hidden flex flex-col pointer-events-none" id="mobile-menu-overlay">
+<div class="absolute inset-0 recalibrating-grid opacity-20"></div>
+<div class="scan-line"></div>
+<div class="menu-inner flex flex-col flex-grow w-full">
+<div class="w-full px-8 pt-12 pb-8 flex justify-between items-center relative z-10 pointer-events-auto">
+<a class="font-headline font-bold text-lg tracking-tighter text-slate-dark uppercase" href="#top" onclick="toggleMenu()" style="">AB //</a>
+<button class="flex items-center gap-2 group" onclick="toggleMenu()" style="">
+<span class="font-headline text-[10px] uppercase tracking-[0.2em] text-slate-dark group-hover:text-brand-orange transition-colors" style="">Close</span>
+<span class="material-symbols-outlined text-slate-dark group-hover:text-brand-orange transition-colors" style="">close</span>
+</button>
+</div>
+<div class="flex flex-col flex-grow justify-center gap-4 w-full px-8 relative z-10 pointer-events-auto">
+<a class="group flex items-baseline gap-4 w-fit" href="#articles" onclick="toggleMenu()" style="">
+<span class="font-headline text-xs text-slate-dark/40 uppercase tracking-widest" style="">[01]</span>
+<h2 class="font-headline font-black text-5xl uppercase tracking-tighter typewriter-text text-slate-dark group-hover:text-brand-orange transition-colors" style="">Articles</h2>
+</a>
+<a class="group flex items-baseline gap-4 w-fit" href="#case-studies" onclick="toggleMenu()" style="">
+<span class="font-headline text-xs text-slate-dark/40 uppercase tracking-widest" style="">[02]</span>
+<h2 class="font-headline font-black text-5xl uppercase tracking-tighter typewriter-text text-slate-dark group-hover:text-brand-orange transition-colors" style="">Case Studies</h2>
+</a>
+<a class="group flex items-baseline gap-4 w-fit" href="#resources" onclick="toggleMenu()" style="">
+<span class="font-headline text-xs text-slate-dark/40 uppercase tracking-widest" style="">[03]</span>
+<h2 class="font-headline font-black text-5xl uppercase tracking-tighter typewriter-text text-slate-dark group-hover:text-brand-orange transition-colors" style="">Resources</h2>
+</a>
+<a class="group flex items-baseline gap-4 w-fit" href="#contact" onclick="toggleMenu()" style="">
+<span class="font-headline text-xs text-slate-dark/40 uppercase tracking-widest" style="">[04]</span>
+<h2 class="font-headline font-black text-5xl uppercase tracking-tighter typewriter-text text-slate-dark group-hover:text-brand-orange transition-colors" style="">Contact</h2>
+</a>
+</div>
+<div class="w-full px-8 pb-12 flex justify-between items-center opacity-30 pointer-events-none">
+<span class="font-headline text-[8px] uppercase tracking-widest text-slate-dark" style="">LAT: 48.3069° N</span>
+<span class="font-headline text-[8px] uppercase tracking-widest text-slate-dark" style="">LNG: 14.2858° E</span>
+</div>
+</div>
+</div>
+<main class="w-full">
+<section class="grid grid-cols-1 md:grid-cols-12 border-b border-slate-border min-h-[795px]" id="hero">
+<div class="md:col-span-6 px-8 md:px-16 pt-48 pb-24 flex flex-col justify-between border-r border-slate-border bg-slate-bg">
+<div>
+<h1 class="reveal text-[clamp(3.5rem,8vw,7rem)] leading-[0.85] font-extrabold tracking-[-0.05em] font-headline uppercase text-slate-dark active" style="">
+                        Alejandro<br/><span class="text-brand-orange" style="">Bauer</span>
+</h1>
+</div>
+<div class="mt-24 flex gap-6 reveal reveal-delay-2 items-center active">
+<div class="relative group cursor-pointer overflow-hidden border border-slate-border">
+<img alt="Alejandro Bauer" class="w-16 h-16 object-cover profile-dither" src="photo.png" style=""/>
+</div>
+<div class="flex flex-col">
+<p class="reveal reveal-delay-3 font-headline text-xs uppercase tracking-widest text-slate-dark/80 font-bold mb-2 active" style="">Senior Product Designer</p>
+<p class="reveal reveal-delay-4 font-headline text-xs uppercase tracking-widest text-slate-dark/80 font-bold active" style="">Linz, Austria — Tractive</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 pt-48 pb-24 flex flex-col justify-end relative overflow-hidden bg-slate-bg" data-dot-container="" id="canvas-container">
+<canvas class="absolute inset-0 z-0 dot-canvas" height="794" width="640"></canvas>
+<div class="absolute inset-0 pulse-overlay pointer-events-none z-1"></div>
+<div class="max-w-xl px-8 md:px-16 relative z-10">
+<h2 class="reveal reveal-delay-1 font-headline tracking-tight leading-[1.1] text-slate-dark uppercase md:text-2xl text-xl font-bold active" style="">
+<div class="" style="">
+                            +15 years of UX refinement and <span class="wavy-strike" style="">nudging pixels</span> UI exploration. </div>Currently focused on AI-optimized design systems and token efficiency.</h2>
+</div>
+</div>
+</section>
+<section class="bg-slate-bg" id="articles">
+<div class="grid grid-cols-1 md:grid-cols-12 border-b border-slate-border">
+<div class="md:col-span-4 p-8 md:p-16 border-r border-slate-border bg-slate-bg">
+<h3 class="reveal font-headline font-bold text-4xl uppercase tracking-tighter text-slate-dark flex items-center gap-4 active" style="">
+<span class="w-2 h-2 bg-brand-orange inline-block shrink-0"></span>
+ARTICLES
+</h3>
+<p class="reveal reveal-delay-1 mt-4 font-headline text-[10px] text-slate-dark/60 uppercase tracking-[0.2em] active" style="">Thoughts on Product design</p>
+</div>
+<div class="md:col-span-8">
+<a href="https://www.linkedin.com/pulse/6-layer-constraint-framework-make-your-design-system-actually-bauer-6bbwf/" target="_blank" class="group border-b border-slate-border grid grid-cols-1 md:grid-cols-8 hover:bg-[#F66227] transition-colors cursor-pointer duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+<div class="md:col-span-1 p-8 border-r border-slate-border font-headline text-xs text-slate-dark/40 reveal group-hover:text-slate-bg transition-colors duration-300 active" style="">01</div>
+<div class="md:col-span-5 p-8">
+<h4 class="reveal reveal-delay-1 text-xl font-headline font-bold uppercase tracking-tight text-slate-dark group-hover:text-slate-bg transition-colors duration-300 active" style="">The 6-Layer Constraint Framework for AI-Native Design Systems</h4>
+<p class="reveal reveal-delay-2 mt-4 text-slate-dark/70 text-sm leading-relaxed max-w-lg group-hover:text-slate-bg transition-colors duration-300 active" style="">An architectural deep-dive into how structural constraints evolve when LLMs become the primary consumers of UI codebases.</p>
+</div>
+<div class="md:col-span-2 p-8 flex flex-col justify-between items-end">
+<span class="reveal font-headline text-[10px] uppercase tracking-widest text-slate-dark/40 group-hover:text-slate-bg transition-colors duration-300 active" style="">LinkedIn</span>
+<span class="material-symbols-outlined text-[#F66227] group-hover:text-slate-bg transition-all duration-500 group-hover:translate-x-2" style="">arrow_forward</span>
+</div>
+</a>
+<a href="https://www.designsystemscollective.com/ai-native-design-explained-as-a-restaurant-fc5866af0d0e" target="_blank" class="group border-b border-slate-border grid grid-cols-1 md:grid-cols-8 hover:bg-[#F66227] transition-colors cursor-pointer duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+<div class="md:col-span-1 p-8 border-r border-slate-border font-headline text-xs text-slate-dark/40 reveal group-hover:text-slate-bg transition-colors duration-300 active" style="">02</div>
+<div class="md:col-span-5 p-8">
+<h4 class="reveal reveal-delay-1 text-xl font-headline font-bold uppercase tracking-tight text-slate-dark group-hover:text-slate-bg transition-colors duration-300 active" style="">AI-Native Design, Explained as a Restaurant</h4>
+<p class="reveal reveal-delay-2 mt-4 text-slate-dark/70 text-sm leading-relaxed max-w-lg group-hover:text-slate-bg transition-colors duration-300 active" style="">A conceptual metaphor for the shift from deterministic UI menus to generative, intent-based service models.</p>
+</div>
+<div class="md:col-span-2 p-8 flex flex-col justify-between items-end">
+<span class="reveal font-headline text-[10px] uppercase tracking-widest text-slate-dark/40 group-hover:text-slate-bg transition-colors duration-300 active" style="">Medium</span>
+<span class="material-symbols-outlined text-[#F66227] group-hover:text-slate-bg transition-all duration-500 group-hover:translate-x-2" style="">arrow_forward</span>
+</div>
+</a>
+<a href="https://www.linkedin.com/pulse/building-ai-native-design-system-token-efficient-claude-bauer-7prrf/" target="_blank" class="group border-b border-slate-border grid grid-cols-1 md:grid-cols-8 hover:bg-[#F66227] transition-colors cursor-pointer duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+<div class="md:col-span-1 p-8 border-r border-slate-border font-headline text-xs text-slate-dark/40 reveal group-hover:text-slate-bg transition-colors duration-300 active" style="">03</div>
+<div class="md:col-span-5 p-8">
+<h4 class="reveal reveal-delay-1 text-xl font-headline font-bold uppercase tracking-tight text-slate-dark group-hover:text-slate-bg transition-colors duration-300 active" style="">Building an AI-Native Design System: Token-Efficient, Claude-Ready</h4>
+<p class="reveal reveal-delay-2 mt-4 text-slate-dark/70 text-sm leading-relaxed max-w-lg group-hover:text-slate-bg transition-colors duration-300 active" style="">A hands-on walkthrough of building a complete design system with Claude Code and Figma Console MCP, optimized for agent consumption.</p>
+</div>
+<div class="md:col-span-2 p-8 flex flex-col justify-between items-end">
+<span class="reveal font-headline text-[10px] uppercase tracking-widest text-slate-dark/40 group-hover:text-slate-bg transition-colors duration-300 active" style="">LinkedIn</span>
+<span class="material-symbols-outlined text-[#F66227] group-hover:text-slate-bg transition-all duration-500 group-hover:translate-x-2" style="">arrow_forward</span>
+</div>
+</a>
+<div class="max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] opacity-0" id="extra-articles">
+<a href="https://www.linkedin.com/pulse/i-tested-claude-design-actually-what-product-designers-bauer-gqfge/" target="_blank" class="group grid grid-cols-1 md:grid-cols-8 hover:bg-[#F66227] transition-colors cursor-pointer duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+<div class="md:col-span-1 p-8 border-r border-slate-border font-headline text-xs text-slate-dark/40 reveal group-hover:text-slate-bg transition-colors duration-300 active" style="">04</div>
+<div class="md:col-span-5 p-8">
+<h4 class="reveal reveal-delay-1 text-xl font-headline font-bold uppercase tracking-tight text-slate-dark group-hover:text-slate-bg transition-colors duration-300 active" style="">I Tested Claude Design. Here's What Product Designers Actually Need to Know.</h4>
+<p class="reveal reveal-delay-2 mt-4 text-slate-dark/70 text-sm leading-relaxed max-w-lg group-hover:text-slate-bg transition-colors duration-300 active" style="">A critical field test of Claude Design's capabilities and limitations from a product designer's perspective.</p>
+</div>
+<div class="md:col-span-2 p-8 flex flex-col justify-between items-end">
+<span class="reveal font-headline text-[10px] uppercase tracking-widest text-slate-dark/40 group-hover:text-slate-bg transition-colors duration-300 active" style="">LinkedIn</span>
+<span class="material-symbols-outlined text-[#F66227] group-hover:text-slate-bg transition-all duration-500 group-hover:translate-x-2 active" style="">arrow_forward</span>
+</div>
+</a>
+</div>
+<button class="w-full p-8 border-t border-slate-border flex justify-between items-center group hover:bg-slate-dark transition-colors duration-500" id="toggle-articles" style="">
+<span class="font-headline text-[10px] uppercase tracking-[0.2em] font-bold text-slate-dark group-hover:text-slate-bg transition-colors" id="toggle-text" style="">See More</span>
+<span class="material-symbols-outlined text-brand-orange group-hover:text-slate-bg transition-transform duration-500" id="toggle-icon" style="">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<section class="bg-slate-bg" id="case-studies">
+<div class="grid grid-cols-1 md:grid-cols-12 border-b border-slate-border">
+<div class="md:col-span-4 p-8 md:p-16 border-r border-slate-border bg-slate-bg">
+<h3 class="reveal font-headline font-bold text-4xl uppercase tracking-tighter text-slate-dark flex items-center gap-4 active" style="">
+<span class="w-2 h-2 bg-brand-orange inline-block shrink-0"></span>
+CASE STUDIES
+</h3>
+<p class="reveal reveal-delay-1 mt-4 font-headline text-[10px] text-slate-dark/60 uppercase tracking-[0.2em] active" style="">From concept to shipped product decisions</p>
+</div>
+<div class="md:col-span-8 bg-slate-bg min-h-[600px] flex items-center justify-center border-slate-border relative overflow-hidden">
+<div class="absolute top-8 left-8 flex flex-col gap-1 opacity-20">
+<span class="font-headline text-[8px] uppercase tracking-widest text-slate-dark" style="">REF_00 // SYSTEM_CHECK</span>
+<div class="w-12 h-px bg-slate-dark"></div>
+</div>
+<div class="absolute bottom-8 right-8 flex items-center gap-4 opacity-20">
+<div class="flex flex-col items-end gap-1">
+<span class="font-headline text-[8px] uppercase tracking-widest text-slate-dark" style="">DATA_SYNC: ACTIVE</span>
+<span class="font-headline text-[8px] uppercase tracking-widest text-slate-dark" style="">STATUS: HIDDEN</span>
+</div>
+<div class="w-1 h-8 bg-slate-dark"></div>
+</div>
+<div class="relative z-10 max-w-lg px-8 py-16 text-center md:text-left">
+<div class="absolute -top-4 -left-4 w-8 h-8 border-t border-l border-slate-border/50 hidden md:block"></div>
+<div class="absolute -bottom-4 -right-4 w-8 h-8 border-b border-r border-slate-border/50 hidden md:block"></div>
+<h4 class="reveal font-headline font-black text-4xl md:text-5xl uppercase tracking-tighter text-slate-dark leading-none active" style="">
+                            Great design needs <span class="text-slate-dark" style="">context.</span>
+</h4>
+<p class="reveal reveal-delay-1 mt-8 text-slate-dark/70 text-sm md:text-base leading-relaxed active" style="">
+                            Most of what I've built lives behind real products, not portfolio pages. Context is everything in design. The constraints, the decisions, what got cut and why. Schedule a call and I'll walk you through it.
+                        </p>
+<div class="reveal reveal-delay-2 mt-12 active">
+<a class="inline-block font-headline tracking-tighter uppercase text-xs font-bold px-10 py-4 bg-slate-dark text-slate-bg hover:bg-brand-orange transition-all" href="https://calendly.com/alecsdose/30min" target="_blank">
+                                Schedule a call
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-slate-bg" id="resources">
+<div class="grid grid-cols-1 md:grid-cols-12 border-b border-slate-border">
+<div class="md:col-span-4 p-8 md:p-16 border-r border-slate-border bg-slate-bg">
+<h3 class="reveal font-headline font-bold text-4xl uppercase tracking-tighter text-slate-dark flex items-center gap-4 active" style="">
+<span class="w-2 h-2 bg-brand-orange inline-block shrink-0"></span>
+RESOURCES
+</h3>
+<p class="reveal reveal-delay-1 mt-4 font-headline text-[10px] text-slate-dark/60 uppercase tracking-[0.2em] active" style="">Experiments and utilities I’ve built</p>
+</div>
+<div class="md:col-span-8 bg-slate-bg">
+<a class="group block grid grid-cols-1 md:grid-cols-8 border-b border-slate-border hover:bg-[#F66227] transition-colors cursor-pointer duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" href="https://github.com/alejandrobauer/AI-Agent-Audit" target="_blank">
+<div class="md:col-span-1 p-8 border-r border-slate-border font-headline text-xs text-slate-dark/40 reveal group-hover:text-slate-bg transition-colors duration-300 active" style="">01</div>
+<div class="md:col-span-5 p-8">
+<h4 class="reveal reveal-delay-1 text-xl font-headline font-bold uppercase tracking-tight text-slate-dark group-hover:text-slate-bg transition-colors duration-300 active" style="">AI Agent Audit — Figma Plugin</h4>
+<p class="reveal reveal-delay-2 mt-4 text-slate-dark/70 text-sm leading-relaxed max-w-lg group-hover:text-slate-bg transition-colors duration-300 active" style="">A diagnostic tool designed to evaluate how accurately LLM agents interpret and execute design systems from raw codebases.</p>
+</div>
+<div class="md:col-span-2 p-8 flex flex-col justify-between items-end">
+<span class="reveal font-headline text-[10px] uppercase tracking-widest text-slate-dark/40 group-hover:text-slate-bg transition-colors duration-300 active" style="">GITHUB</span>
+<span class="material-symbols-outlined text-[#F66227] group-hover:text-slate-bg transition-all duration-500 group-hover:translate-x-2" style="">arrow_forward</span>
+</div>
+</a>
+<div class="group grid grid-cols-1 md:grid-cols-8 opacity-50 cursor-not-allowed">
+<div class="md:col-span-1 p-8 border-r border-slate-border font-headline text-xs text-slate-dark/40" style="">02</div>
+<div class="md:col-span-5 p-8">
+<h4 class="text-xl font-headline font-bold uppercase tracking-tight text-slate-dark" style="">AI Agent Audit — Skill</h4>
+<p class="mt-4 text-slate-dark/70 text-sm leading-relaxed max-w-lg" style="">Coming soon.</p>
+</div>
+<div class="md:col-span-2 p-8 flex flex-col justify-between items-end">
+<span class="font-headline text-[10px] uppercase tracking-widest text-slate-dark/40" style="">SOON</span>
+<span class="material-symbols-outlined text-slate-dark/20" style="">hourglass_empty</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-slate-bg flex border-b border-slate-border min-h-[600px]" id="contact">
+<div class="relative w-full p-8 md:p-12 flex flex-col bg-slate-bg justify-center items-center overflow-hidden" data-dot-container="" id="footer-contact-container">
+<canvas class="absolute inset-0 z-0 dot-canvas" height="599" width="1280"></canvas>
+<div class="absolute inset-0 pulse-overlay pointer-events-none z-1"></div>
+<div class="reveal reveal-delay-1 w-full max-w-[320px] border p-10 flex flex-col justify-between relative z-10 border-slate-border aspect-[2/3] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] bg-[#E9EEEE]/40 backdrop-blur-md contact-card active">
+<div class="flex flex-col gap-0">
+<h3 class="reveal reveal-delay-2 font-headline text-3xl font-extrabold uppercase text-slate-dark tracking-tighter leading-none mb-2 active" style="">Alejandro<br/><span class="text-brand-orange" style="">Bauer</span></h3>
+<p class="reveal reveal-delay-3 font-headline text-[11px] text-slate-dark/50 uppercase tracking-[0.2em] font-medium active" style="">Product Designer</p>
+</div>
+<div class="flex flex-col gap-1.5 justify-end mt-auto">
+<a class="reveal reveal-delay-1 flex items-center font-headline font-bold uppercase text-slate-dark hover:text-brand-orange transition-colors group/link active" href="https://www.linkedin.com/in/alejandrobauer" target="_blank"><span class="font-headline text-[11px] font-bold tracking-widest uppercase">LN: LinkedIn</span></a>
+<a class="reveal reveal-delay-2 flex items-center font-headline font-bold uppercase text-slate-dark hover:text-brand-orange transition-colors group/link active" href="https://github.com/alejandrobauer" target="_blank"><span class="font-headline text-[11px] font-bold tracking-widest uppercase">GH: GitHub</span></a>
+<a class="reveal reveal-delay-3 flex items-center font-headline font-bold uppercase text-slate-dark hover:text-brand-orange transition-colors group/link active" href="https://medium.com/@alejandrobauer" target="_blank"><span class="font-headline text-[11px] font-bold tracking-widest uppercase">MD: Medium</span></a>
+<a class="reveal reveal-delay-4 flex items-center font-headline font-bold uppercase text-slate-dark hover:text-brand-orange transition-colors group/link active" href="mailto:alecsdose@gmail.com"><span class="font-headline text-[11px] font-bold tracking-widest uppercase">EM: Email</span></a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-bg w-full border-t border-slate-border">
+<div class="max-w-full px-8 md:px-16 py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div class="order-2 md:order-2">
+<p class="reveal reveal-delay-1 text-slate-dark/60 font-headline text-[10px] tracking-widest uppercase active" style="">© 2026 Alejandro Bauer. All Rights Reserved.</p>
+</div>
+<div class="order-1 md:order-1">
+<div class="reveal text-sm font-bold text-slate-dark font-headline uppercase tracking-tighter active" style="">Alejandro Bauer</div>
+</div>
+</div>
+</footer>
+<script>
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const menuIcon = document.getElementById('menu-icon');
+        const toggleMenu = () => {
+            const isOpen = mobileMenuOverlay.classList.contains('open');
+            if (!isOpen) {
+                mobileMenuOverlay.classList.remove('closing', 'hiding', 'typing-out');
+                // Force animation restart so typewriter replays from scratch
+                const texts = mobileMenuOverlay.querySelectorAll('.typewriter-text');
+                texts.forEach(t => {
+                    t.style.animation = 'none';
+                    t.style.animationDelay = '';
+                    t.offsetHeight; // trigger reflow
+                    t.style.animation = '';
+                });
+                mobileMenuOverlay.classList.add('open');
+                mobileMenuOverlay.style.pointerEvents = 'auto';
+                menuIcon.textContent = 'close';
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenuOverlay.style.pointerEvents = 'none';
+                menuIcon.textContent = 'menu';
+                document.body.style.overflow = '';
+                // Step 1: type out text staggered
+                const texts = mobileMenuOverlay.querySelectorAll('.typewriter-text');
+                texts.forEach((t, i) => { t.style.animationDelay = `${i * 55}ms`; });
+                mobileMenuOverlay.classList.add('typing-out');
+                const typingOutDuration = 250 + (texts.length - 1) * 55 + 20;
+                setTimeout(() => {
+                    // Step 2: fade remaining elements
+                    mobileMenuOverlay.classList.add('hiding');
+                    setTimeout(() => {
+                        // Step 3: collapse the circle
+                        mobileMenuOverlay.classList.remove('open');
+                        mobileMenuOverlay.classList.add('closing');
+                        mobileMenuOverlay.addEventListener('animationend', () => {
+                            mobileMenuOverlay.classList.remove('closing', 'hiding', 'typing-out');
+                            texts.forEach(t => { t.style.animationDelay = ''; });
+                        }, { once: true });
+                    }, 220);
+                }, typingOutDuration);
+            }
+        };
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            };
+            const observerOptions = { 
+                threshold: 0.05, 
+                rootMargin: '0px 0px -20px 0px' 
+            };
+            const observer = new IntersectionObserver(revealCallback, observerOptions);
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            window.addEventListener('scroll', () => {
+                let current = "";
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (window.pageYOffset >= sectionTop - 150) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('active-nav');
+                    link.classList.add('text-slate-dark/60');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active-nav');
+                        link.classList.remove('text-slate-dark/60');
+                    }
+                });
+            });
+
+            const initDotGrid = (container) => {
+                const canvas = container.querySelector('.dot-canvas');
+                if (!canvas) return;
+                const ctx = canvas.getContext('2d');
+                let width, height;
+                const spacing = 32;
+                const dots = [];
+                const mouse = { x: -1000, y: -1000 };
+                const radius = 200;
+                const force = 45;
+                class Dot {
+                    constructor(x, y) {
+                        this.originX = x;
+                        this.originY = y;
+                        this.x = x;
+                        this.y = y;
+                        this.vx = 0;
+                        this.vy = 0;
+                        this.friction = 0.88;
+                        this.spring = 0.08;
+                    }
+                    update() {
+                        const dx = mouse.x - this.x;
+                        const dy = mouse.y - this.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < radius) {
+                            const angle = Math.atan2(dy, dx);
+                            const pushFactor = (radius - dist) / radius;
+                            const displacement = pushFactor * force;
+                            this.vx -= Math.cos(angle) * displacement * 0.2;
+                            this.vy -= Math.sin(angle) * displacement * 0.2;
+                        }
+                        this.vx += (this.originX - this.x) * this.spring;
+                        this.vy += (this.originY - this.y) * this.spring;
+                        this.vx *= this.friction;
+                        this.vy *= this.friction;
+                        this.x += this.vx;
+                        this.y += this.vy;
+                    }
+                    draw() {
+                        ctx.fillStyle = '#4A4A4A'; 
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, 1.5, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }
+                function init() {
+                    const rect = container.getBoundingClientRect();
+                    width = canvas.width = rect.width;
+                    height = canvas.height = rect.height;
+                    dots.length = 0;
+                    for (let x = spacing / 2; x < width; x += spacing) {
+                        for (let y = spacing / 2; y < height; y += spacing) {
+                            dots.push(new Dot(x, y));
+                        }
+                    }
+                }
+                function animate() {
+                    ctx.clearRect(0, 0, width, height);
+                    dots.forEach(dot => {
+                        dot.update();
+                        dot.draw();
+                    });
+                    requestAnimationFrame(animate);
+                }
+                window.addEventListener('resize', init);
+                container.addEventListener('mousemove', (e) => {
+                    const rect = canvas.getBoundingClientRect();
+                    mouse.x = e.clientX - rect.left;
+                    mouse.y = e.clientY - rect.top;
+                });
+                container.addEventListener('mouseleave', () => {
+                    mouse.x = -1000;
+                    mouse.y = -1000;
+                });
+                init();
+                animate();
+            };
+            document.querySelectorAll('[data-dot-container]').forEach(container => {
+                initDotGrid(container);
+            });
+        });
+
+        document.getElementById('toggle-articles').addEventListener('click', function() {
+            const container = document.getElementById('extra-articles');
+            const text = document.getElementById('toggle-text');
+            const icon = document.getElementById('toggle-icon');
+            const isExpanded = !container.classList.contains('max-h-0');
+
+            if (isExpanded) {
+                container.style.maxHeight = '0';
+                container.classList.add('max-h-0', 'opacity-0');
+                container.classList.remove('opacity-100');
+                text.textContent = 'See More';
+                icon.style.transform = 'rotate(0deg)';
+                document.getElementById('articles').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                container.classList.remove('max-h-0', 'opacity-0');
+                container.classList.add('opacity-100');
+                container.style.maxHeight = container.scrollHeight + 'px';
+                text.textContent = 'See Less';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        });
+    </script><script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-toggle-icon');
+    const html = document.documentElement;
+
+    const updateIcon = (isDark) => {
+        themeIcon.textContent = isDark ? 'light_mode' : 'dark_mode';
+    };
+
+    // Initial setup
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.classList.add('dark');
+        updateIcon(true);
+    } else {
+        html.classList.remove('dark');
+        updateIcon(false);
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const isDark = html.classList.toggle('dark');
+        if (isDark) {
+            localStorage.theme = 'dark';
+            updateIcon(true);
+        } else {
+            localStorage.theme = 'light';
+            updateIcon(false);
+        }
+    });
+</script></body></html>
